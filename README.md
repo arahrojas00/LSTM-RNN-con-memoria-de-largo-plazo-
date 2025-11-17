@@ -63,7 +63,7 @@ Estas clases fueron elegidas por su similitud visual y gestual, representando un
 
 ## Resultados
 
-**Precisión:
+**Precisión:**
 - Precisión en validación: ~62%
 - Precisión en el conjunto de prueba: 63.37%
 - Las confusiones se dan mayormente entre acciones similares como `HeadMassage` y `BlowDryHair`
