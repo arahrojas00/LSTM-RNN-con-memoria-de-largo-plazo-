@@ -74,7 +74,7 @@ Estas clases fueron elegidas por su similitud visual y gestual, representando un
 
 Este proyecto está diseñado para ejecutarse en **Google Colab**.
 
-### 📦 Librerías necesarias
+### Librerías necesarias
 
 Instala las siguientes bibliotecas:
 
