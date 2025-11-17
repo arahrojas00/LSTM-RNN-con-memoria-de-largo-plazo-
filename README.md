@@ -2,13 +2,13 @@
 Modelo basado en LSTM (RNN) sobre secuencias de coordenadas de esqueletos 2D.
 # Detección de Acciones Humanas en Videos del Dataset UCF101 Usando Esqueletos 2D
 
-## 🎯 Objetivo
+## Objetivo
 
 Este proyecto implementa un modelo de Deep Learning para **clasificar acciones humanas** en videos del dataset **UCF101**, utilizando como entrada coordenadas de **esqueletos 2D** extraídas previamente. Se desarrolla una arquitectura basada en **LSTM** que modela la dinámica temporal del movimiento humano.
 
 ---
 
-## 🧠 Arquitectura del Modelo
+## Arquitectura del Modelo
 
 - Tipo: **LSTM (Long Short-Term Memory)**
 - Entrada: Secuencias de esqueletos 2D normalizados, en forma `(frames, 34)`
@@ -20,7 +20,7 @@ Este proyecto implementa un modelo de Deep Learning para **clasificar acciones h
 
 ---
 
-## 📁 Dataset
+## Dataset
 
 - **Fuente:** [UCF101 Dataset](https://www.crcv.ucf.edu/data/UCF101.php)
 - **Representación usada:** Coordenadas 2D de esqueletos por frame en archivo `.pkl` (se proporciona enlace oficial en las instrucciones del curso)
@@ -35,7 +35,7 @@ Estas clases fueron elegidas por su similitud visual y gestual, representando un
 
 ---
 
-## 🔄 Pipeline
+## Pipeline
 
 1. **Carga de datos:**
    - Lectura del archivo `.pkl` con anotaciones de poses 2D
@@ -61,21 +61,22 @@ Estas clases fueron elegidas por su similitud visual y gestual, representando un
 
 ---
 
-## 📊 Resultados
+## Resultados
 
-- **Precisión final en test set:** ~78–80%
-- Supera claramente al modelo baseline (pose estática por frame)
-- Las confusiones se dan mayormente entre acciones similares como `ApplyLipstick` y `ApplyEyeMakeup`
+- **Precisión:
+- Precisión en validación: ~62%
+- Precisión en el conjunto de prueba: 63.37%
+- Las confusiones se dan mayormente entre acciones similares como `HeadMassage` y `BlowDryHair`
 
 ---
 
-## ⚙️ Requisitos del Entorno
+## Requisitos del Entorno
 
-Este proyecto está diseñado para ejecutarse en **Google Colab** con GPU. Asegúrate de activar el entorno de ejecución con acelerador GPU.
+Este proyecto está diseñado para ejecutarse en **Google Colab**.
 
 ### 📦 Librerías necesarias
 
-Instala las siguientes bibliotecas si corres en local:
+Instala las siguientes bibliotecas:
 
 ```bash
 pip install numpy pandas matplotlib seaborn scikit-learn tensorflow
