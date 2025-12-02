@@ -61,6 +61,13 @@ Estas clases fueron elegidas por su similitud visual y gestual, representando un
 
 ---
 
+## Baseline
+
+**rat:**
+- Prgene
+
+---
+
 ## Resultados
 
 **Precisión:**
