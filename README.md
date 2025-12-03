@@ -73,9 +73,9 @@ Como línea base se usa un modelo **LSTM simple**:
 **Entrenamiento (baseline):**
 - Optimizer: Adam (lr=0.001)
 - Loss: `categorical_crossentropy`
-- EarlyStopping: `monitor=val_accuracy`, `patience=3` :contentReference[oaicite:12]{index=12}
+- EarlyStopping: `monitor=val_accuracy`, `patience=3` 
 
-**Resultado baseline (test accuracy):** **51.48%** :contentReference[oaicite:13]{index=13}
+**Resultado baseline (test accuracy):** **51.48%** 
 
 ---
 
@@ -92,9 +92,9 @@ Modelo más profundo para capturar mejor la dinámica temporal y reducir sobreaj
 **Entrenamiento (mejorado):**
 - Optimizer: Adam (lr=0.001)
 - Loss: `categorical_crossentropy`
-- EarlyStopping: `monitor=val_loss`, `patience=5` :contentReference[oaicite:15]{index=15}
+- EarlyStopping: `monitor=val_loss`, `patience=5` 
 
-**Resultado mejorado (test accuracy):** **65.35%** :contentReference[oaicite:16]{index=16}
+**Resultado mejorado (test accuracy):** **65.35%** 
 
 ---
 
@@ -102,8 +102,8 @@ Modelo más profundo para capturar mejor la dinámica temporal y reducir sobreaj
 
 | Modelo | Test Accuracy |
 |-------|--------------:|
-| Baseline (LSTM simple) | **51.48%** :contentReference[oaicite:17]{index=17} |
-| Mejorado (2×LSTM + Dropout) | **65.35%** :contentReference[oaicite:18]{index=18} |
+| Baseline (LSTM simple) | **51.48%**  |
+| Mejorado (2×LSTM + Dropout) | **65.35%**  |
 
 ---
 
@@ -112,7 +112,7 @@ Modelo más profundo para capturar mejor la dinámica temporal y reducir sobreaj
 Se incluye una función para buscar un `video_id` en las anotaciones, preprocesarlo y predecir su clase:
 
 - `preprocess_sequence(...)`
-- `predict_video(video_id, data, model, class_names)` :contentReference[oaicite:20]{index=20}
+- `predict_video(video_id, data, model, class_names)` 
   
 ---
 ## Requisitos del Entorno
