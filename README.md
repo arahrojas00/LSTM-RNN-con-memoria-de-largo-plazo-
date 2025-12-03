@@ -98,7 +98,7 @@ Modelo más profundo para capturar mejor la dinámica temporal y reducir sobreaj
 
 ---
 
-## 📈 Resultados
+## Resultados
 
 | Modelo | Test Accuracy |
 |-------|--------------:|
@@ -107,7 +107,7 @@ Modelo más profundo para capturar mejor la dinámica temporal y reducir sobreaj
 
 ---
 
-## 🔮 Predicción (Inferencia)
+## Predicción (Inferencia)
 
 Se incluye una función para buscar un `video_id` en las anotaciones, preprocesarlo y predecir su clase:
 
