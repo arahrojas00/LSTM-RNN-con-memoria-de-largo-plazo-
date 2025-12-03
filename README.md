@@ -61,22 +61,60 @@ Estas clases fueron elegidas por su similitud visual y gestual, representando un
 
 ---
 
-## Baseline
+## Baseline (Modelo Base)
 
-**rat:**
-- Prgene
+Como línea base se usa un modelo **LSTM simple**:
+
+- `Masking`
+- `LSTM(32)`
+- `Dense(5, softmax)`
+- ~8.7K parámetros :contentReference[oaicite:11]{index=11}
+
+**Entrenamiento (baseline):**
+- Optimizer: Adam (lr=0.001)
+- Loss: `categorical_crossentropy`
+- EarlyStopping: `monitor=val_accuracy`, `patience=3` :contentReference[oaicite:12]{index=12}
+
+**Resultado baseline (test accuracy):** **51.48%** :contentReference[oaicite:13]{index=13}
 
 ---
 
-## Resultados
+##  Modelo Mejorado
 
-**Precisión:**
-- Precisión en validación: ~62%
-- Precisión en el conjunto de prueba: 63.37%
-- Las confusiones se dan mayormente entre acciones similares como `HeadMassage` y `BlowDryHair`
+Modelo más profundo para capturar mejor la dinámica temporal y reducir sobreajuste:
+
+- `Masking`
+- `LSTM(64, return_sequences=True)` + `Dropout(0.5)`
+- `LSTM(64)` + `Dropout(0.5)`
+- `Dense(5, softmax)`
+- 58,693 parámetros :contentReference[oaicite:14]{index=14}
+
+**Entrenamiento (mejorado):**
+- Optimizer: Adam (lr=0.001)
+- Loss: `categorical_crossentropy`
+- EarlyStopping: `monitor=val_loss`, `patience=5` :contentReference[oaicite:15]{index=15}
+
+**Resultado mejorado (test accuracy):** **65.35%** :contentReference[oaicite:16]{index=16}
 
 ---
 
+## 📈 Resultados
+
+| Modelo | Test Accuracy |
+|-------|--------------:|
+| Baseline (LSTM simple) | **51.48%** :contentReference[oaicite:17]{index=17} |
+| Mejorado (2×LSTM + Dropout) | **65.35%** :contentReference[oaicite:18]{index=18} |
+
+---
+
+## 🔮 Predicción (Inferencia)
+
+Se incluye una función para buscar un `video_id` en las anotaciones, preprocesarlo y predecir su clase:
+
+- `preprocess_sequence(...)`
+- `predict_video(video_id, data, model, class_names)` :contentReference[oaicite:20]{index=20}
+  
+---
 ## Requisitos del Entorno
 
 Este proyecto está diseñado para ejecutarse en **Google Colab**.
