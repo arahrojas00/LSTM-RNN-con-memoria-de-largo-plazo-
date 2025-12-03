@@ -68,7 +68,7 @@ Como línea base se usa un modelo **LSTM simple**:
 - `Masking`
 - `LSTM(32)`
 - `Dense(5, softmax)`
-- ~8.7K parámetros :contentReference[oaicite:11]{index=11}
+- ~8.7K parámetros 
 
 **Entrenamiento (baseline):**
 - Optimizer: Adam (lr=0.001)
@@ -87,7 +87,7 @@ Modelo más profundo para capturar mejor la dinámica temporal y reducir sobreaj
 - `LSTM(64, return_sequences=True)` + `Dropout(0.5)`
 - `LSTM(64)` + `Dropout(0.5)`
 - `Dense(5, softmax)`
-- 58,693 parámetros :contentReference[oaicite:14]{index=14}
+- 58,693 parámetros 
 
 **Entrenamiento (mejorado):**
 - Optimizer: Adam (lr=0.001)
